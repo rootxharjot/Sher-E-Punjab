@@ -101,111 +101,134 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>Car Inventory</title>
-  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
-  <style>
-    body {
-      font-family: Arial, sans-serif;
-      background: #f5f7fa;
-      padding: 20px;
-    }
-    .car-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-      gap: 20px;
-    }
-    .car-card {
-      background: white;
-      border-radius: 12px;
-      padding: 20px;
-      text-align: center;
-      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
-      transition: transform 0.2s;
-    }
-    .car-card:hover {
-      transform: translateY(-5px);
-    }
-    .car-icon {
-      font-size: 50px;
-      color: #007bff;
-      margin-bottom: 15px;
-    }
-    .car-card h3 {
-      margin: 10px 0;
-      font-size: 20px;
-      color: #333;
-    }
-    .car-details {
-      color: #555;
-      font-size: 14px;
-      margin-bottom: 15px;
-    }
-    .btn {
-      display: inline-block;
-      background: #007bff;
-      color: white;
-      padding: 10px 20px;
-      border-radius: 6px;
-      text-decoration: none;
-      font-weight: bold;
-      transition: background 0.2s;
-    }
-    .btn:hover {
-      background: #0056b3;
-    }
-  </style>
-</head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Our Fleet</title>
+
+    <style>
+        /* Basic reset and container styling */
+        body {
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f9; /* Light background for contrast */
+        }
+        
+        .fleet-heading {
+            text-align: center;
+            padding: 40px 20px 20px;
+            font-family: Arial, sans-serif;
+            color: #333;
+            font-size: 2.5em;
+        }
+
+        /* Main Flexbox Grid Container */
+        .car-fleet {
+            display: flex;
+            flex-wrap: wrap; /* Allows cards to wrap to the next line */
+            gap: 20px; /* Space between the cards */
+            padding: 20px;
+            justify-content: center; /* Centers the cards horizontally */
+            font-family: Arial, sans-serif;
+        }
+
+        /* Style for each individual car card */
+        .car-card {
+            background-color: #ffffff;
+            border: 1px solid #e0e0e0;
+            border-radius: 8px;
+            padding: 20px;
+            width: 280px; /* Fixed width for a clean grid look */
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            text-align: center;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        /* Professional hover effect */
+        .car-card:hover {
+            transform: translateY(-5px); /* Lifts the card on hover */
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+        }
+
+        /* Car Name Styling */
+        .car-card h3 {
+            color: #1a1a1a;
+            margin-top: 0;
+            margin-bottom: 10px;
+            font-size: 1.4em;
+        }
+
+        /* Car Details Styling */
+        .car-card p {
+            color: #555555;
+            margin-bottom: 20px;
+            font-size: 1em;
+        }
+
+        /* Book Now Button Styling */
+        .book-btn {
+            display: inline-block;
+            padding: 10px 20px;
+            background-color: #f7931e; /* Primary Taxi/Rental color */
+            color: white;
+            text-decoration: none;
+            border-radius: 4px;
+            font-weight: bold;
+            letter-spacing: 0.5px;
+            transition: background-color 0.3s ease;
+        }
+
+        .book-btn:hover {
+            background-color: #e07b00; /* Darker shade on hover */
+        }
+    </style>
+    </head>
 <body>
 
-<h2 style="text-align:center; margin-bottom:30px;">🚖 Our Fleet</h2>
+    <h1 class="fleet-heading">Our Fleet</h1>
 
-<div class="car-grid">
-  <div class="car-card">
-    <i class="fa-solid fa-car-side car-icon"></i>
-    <h3>Innova Crysta</h3>
-    <p class="car-details">7 seats · AC · Large luggage</p>
-    <a href="#" class="btn">Book Now</a>
-  </div>
+    <div class="car-fleet">
+        
+        <div class="car-card">
+            <h3>Innova Crysta</h3>
+            <p>Seats: 7 | AC | Large Luggage</p>
+            <a href="#" class="book-btn">Book Now</a>
+        </div>
 
-  <div class="car-card">
-    <i class="fa-solid fa-car car-icon"></i>
-    <h3>Honda Amaze</h3>
-    <p class="car-details">4 seats · AC · Compact</p>
-    <a href="#" class="btn">Book Now</a>
-  </div>
+        <div class="car-card">
+            <h3>Honda Amaze</h3>
+            <p>Seats: 4 | AC | Compact</p>
+            <a href="#" class="book-btn">Book Now</a>
+        </div>
 
-  <div class="car-card">
-    <i class="fa-solid fa-taxi car-icon"></i>
-    <h3>Suzuki Ertiga</h3>
-    <p class="car-details">7 seats · AC · Family</p>
-    <a href="#" class="btn">Book Now</a>
-  </div>
+        <div class="car-card">
+            <h3>Suzuki Ertiga</h3>
+            <p>Seats: 7 | AC | Family</p>
+            <a href="#" class="book-btn">Book Now</a>
+        </div>
 
-  <div class="car-card">
-    <i class="fa-solid fa-bus car-icon"></i>
-    <h3>Tempo Traveller</h3>
-    <p class="car-details">12–15 seats · AC · Group travel</p>
-    <a href="#" class="btn">Book Now</a>
-  </div>
+        <div class="car-card">
+            <h3>Tempo Traveller</h3>
+            <p>Seats: 12-15 | AC | Group Travel</p>
+            <a href="#" class="book-btn">Book Now</a>
+        </div>
 
-  <div class="car-card">
-    <i class="fa-solid fa-car-side car-icon"></i>
-    <h3>Toyota Etios</h3>
-    <p class="car-details">4 seats · AC · Comfortable</p>
-    <a href="#" class="btn">Book Now</a>
-  </div>
+        <div class="car-card">
+            <h3>Toyota Etios</h3>
+            <p>Seats: 4 | AC | Comfortable</p>
+            <a href="#" class="book-btn">Book Now</a>
+        </div>
 
-  <div class="car-card">
-    <i class="fa-solid fa-car-side car-icon"></i>
-    <h3>Swift Dzire</h3>
-    <p class="car-details">4 seats · AC · Economy</p>
-    <a href="#" class="btn">Book Now</a>
-  </div>
-</div>
+        <div class="car-card">
+            <h3>Swift Dzire</h3>
+            <p>Seats: 4 | AC | Economy</p>
+            <a href="#" class="book-btn">Book Now</a>
+        </div>
 
-</body>
+    </div>
+    </body>
 </html>
+
+
 <div style="text-align:center; padding:20px; background:#f9f9f9; border-radius:10px; max-width:600px; margin:auto; box-shadow:0 2px 8px rgba(0,0,0,0.1);">
         <!-- Email -->
   <p style="font-size:18px; margin:5px 0;">
