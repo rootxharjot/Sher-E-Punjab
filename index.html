@@ -123,6 +123,119 @@
 
 </div>
         </section>
+        <!-- Car Inventory — paste where you want it to appear -->
+<section class="inventory">
+  <h2 class="title">Our Fleet</h2>
+
+  <div class="grid">
+    <article class="card">
+      <svg class="thumb" viewBox="0 0 100 60" aria-hidden>
+        <rect width="100" height="60" rx="6" fill="#eceff1"></rect>
+        <text x="50" y="34" font-size="10" text-anchor="middle" fill="#9aa4a8">Innova Crysta</text>
+      </svg>
+      <h3>Innova Crysta</h3>
+      <p class="meta">7 seats · AC · Large luggage</p>
+      <div class="actions">
+        <button class="btn">Book Now</button>
+      </div>
+    </article>
+
+    <article class="card">
+      <svg class="thumb" viewBox="0 0 100 60" aria-hidden>
+        <rect width="100" height="60" rx="6" fill="#eceff1"></rect>
+        <text x="50" y="34" font-size="10" text-anchor="middle" fill="#9aa4a8">Honda Amaze</text>
+      </svg>
+      <h3>Honda Amaze</h3>
+      <p class="meta">4 seats · AC · Compact</p>
+      <div class="actions"><button class="btn">Book Now</button></div>
+    </article>
+
+    <article class="card">
+      <svg class="thumb" viewBox="0 0 100 60" aria-hidden>
+        <rect width="100" height="60" rx="6" fill="#eceff1"></rect>
+        <text x="50" y="34" font-size="10" text-anchor="middle" fill="#9aa4a8">Suzuki Ertiga</text>
+      </svg>
+      <h3>Suzuki Ertiga</h3>
+      <p class="meta">7 seats · AC · Family</p>
+      <div class="actions"><button class="btn">Book Now</button></div>
+    </article>
+
+    <article class="card">
+      <svg class="thumb" viewBox="0 0 100 60" aria-hidden>
+        <rect width="100" height="60" rx="6" fill="#eceff1"></rect>
+        <text x="50" y="34" font-size="10" text-anchor="middle" fill="#9aa4a8">Tempo Traveller</text>
+      </svg>
+      <h3>Tempo Traveller</h3>
+      <p class="meta">12–15 seats · AC · Group travel</p>
+      <div class="actions"><button class="btn">Book Now</button></div>
+    </article>
+
+    <article class="card">
+      <svg class="thumb" viewBox="0 0 100 60" aria-hidden>
+        <rect width="100" height="60" rx="6" fill="#eceff1"></rect>
+        <text x="50" y="34" font-size="10" text-anchor="middle" fill="#9aa4a8">Toyota Etios</text>
+      </svg>
+      <h3>Toyota Etios</h3>
+      <p class="meta">4 seats · AC · Comfortable</p>
+      <div class="actions"><button class="btn">Book Now</button></div>
+    </article>
+
+    <article class="card">
+      <svg class="thumb" viewBox="0 0 100 60" aria-hidden>
+        <rect width="100" height="60" rx="6" fill="#eceff1"></rect>
+        <text x="50" y="34" font-size="10" text-anchor="middle" fill="#9aa4a8">Swift Dzire</text>
+      </svg>
+      <h3>Swift Dzire</h3>
+      <p class="meta">4 seats · AC · Economy</p>
+      <div class="actions"><button class="btn">Book Now</button></div>
+    </article>
+  </div>
+</section>
+
+<!-- Styles (put in your CSS file or inside <style>) -->
+<style>
+  .inventory { max-width:1100px; margin:28px auto; padding:18px; }
+  .title { text-align:center; font-family: Arial, Helvetica, sans-serif; margin-bottom:18px; color:#222; }
+  .grid {
+    display:grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap:16px;
+  }
+
+  .card {
+    background:#fff;
+    border-radius:12px;
+    padding:14px;
+    box-shadow: 0 6px 18px rgba(18,24,35,0.06);
+    text-align:center;
+    font-family: Arial, Helvetica, sans-serif;
+    transition: transform .12s ease, box-shadow .12s ease;
+  }
+  .card:hover { transform: translateY(-6px); box-shadow: 0 12px 28px rgba(18,24,35,0.08); }
+
+  .thumb { width:100%; height:110px; display:block; margin-bottom:10px; border-radius:8px; }
+  .card h3 { margin:6px 0 4px; font-size:18px; color:#111; }
+  .meta { margin:0 0 12px; color:#6b7176; font-size:14px; }
+
+  .actions { display:flex; justify-content:center; gap:8px; }
+  .btn {
+    background:linear-gradient(180deg,#0073e6,#005bb5);
+    color:white;
+    border:0;
+    padding:8px 14px;
+    border-radius:8px;
+    cursor:pointer;
+    font-weight:600;
+    box-shadow: 0 4px 10px rgba(0,91,181,0.14);
+  }
+  .btn:active { transform: translateY(1px); }
+
+  /* small tweak for very small screens */
+  @media (max-width:360px) {
+    .thumb { height:88px; }
+    .card h3 { font-size:16px; }
+  }
+</style>
         <section class="section-3">
             <!-- End section-2 -->
             <!-- Start section-3 -->
